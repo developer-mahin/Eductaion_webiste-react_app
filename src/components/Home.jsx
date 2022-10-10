@@ -1,10 +1,11 @@
 import React from "react";
 import { useContext } from "react";
+import QuizItem from "./QuizItem";
 import { QuizContext } from "./Root";
 
 const Home = () => {
-
-
+  const quizItems = useContext(QuizContext);
+  const items = quizItems.data;
 
   return (
     <div>
@@ -59,7 +60,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <section className="grid lg:grid-cols-4">
+        {items.map((item) => (
+          <QuizItem key={item.id} item={item}></QuizItem>
+        ))}
+      </section>
     </div>
   );
 };

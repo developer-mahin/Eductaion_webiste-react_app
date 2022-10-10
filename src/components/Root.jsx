@@ -7,7 +7,8 @@ import Header from "./Header";
 export const QuizContext = createContext([]);
 
 const Root = () => {
-    const quizItems = useLoaderData([]);
+    const quizItems = useLoaderData();
+
   return (
     <QuizContext.Provider value={quizItems}>
       <Header></Header>
