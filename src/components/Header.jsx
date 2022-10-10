@@ -1,70 +1,69 @@
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../logo.webp";
 
 const Header = () => {
+  let activeStyle = {
+    borderBottom: '3px solid blue',
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div>
       <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div class="relative flex items-center justify-between">
-          <a
-            href="/"
+          <Link
+            to="/"
             aria-label="Company"
             title="Company"
             class="inline-flex items-center"
           >
             <img src={logo} alt="" />
-          </a>
+          </Link>
           <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="/"
+              <NavLink
+                to="/home"
                 aria-label="Our product"
                 title="Our product"
                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Product
-              </a>
+                Home
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/"
+              <NavLink
+                to="/topics"
                 aria-label="Our product"
                 title="Our product"
                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Features
-              </a>
+                Topics
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/"
+              <NavLink
+                to="/statistics"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              >
+                Statistics
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/blog"
                 aria-label="Product pricing"
                 title="Product pricing"
                 class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                aria-label="About us"
-                title="About us"
-                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                About us
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-              >
-                Sign up
-              </a>
+                Blog
+              </NavLink>
             </li>
           </ul>
           <div class="lg:hidden">
@@ -94,17 +93,14 @@ const Header = () => {
                 <div class="p-5 bg-white border rounded shadow-sm">
                   <div class="flex items-center justify-between mb-4">
                     <div>
-                      <a
-                        href="/"
+                      <Link
+                        to="/"
                         aria-label="Company"
                         title="Company"
                         class="inline-flex items-center"
                       >
-                       <img className="w-2/5" src={logo} alt="" />
-                        <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Company
-                        </span>
-                      </a>
+                        <img className="w-2/5" src={logo} alt="" />
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -125,54 +121,48 @@ const Header = () => {
                   <nav>
                     <ul class="space-y-4">
                       <li>
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/home"
                           aria-label="Our product"
                           title="Our product"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          style={({ isActive }) => (isActive ? activeStyle : undefined)}
                         >
-                          Product
-                        </a>
+                          Home
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/topics"
                           aria-label="Our product"
                           title="Our product"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          style={({ isActive }) => (isActive ? activeStyle : undefined)}
                         >
-                          Features
-                        </a>
+                          Topics
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/statistics"
+                          aria-label="Our product"
+                          title="Our product"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                        >
+                          Statistics
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/blog"
                           aria-label="Product pricing"
                           title="Product pricing"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          style={({ isActive }) => (isActive ? activeStyle : undefined)}
                         >
-                          Pricing
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          About us
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
-                        </a>
+                          Blog
+                        </NavLink>
                       </li>
                     </ul>
                   </nav>
