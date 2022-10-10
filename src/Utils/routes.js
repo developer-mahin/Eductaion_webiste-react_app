@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import Root from "../components/Root";
 import Statistics from "../components/Statistics";
 import Topics from "../components/Topics";
+import loadQuiz from "./quizLoader";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
+                loader: loadQuiz,
                 element: <Home></Home>
             },
             {

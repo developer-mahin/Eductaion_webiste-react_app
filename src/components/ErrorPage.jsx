@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
 import Header from "./Header";
 
 const ErrorPage = () => {
@@ -46,7 +45,6 @@ const ErrorPage = () => {
           </Link>
         </div>
       </section>
-      <Footer></Footer>
     </div>
   );
 };
