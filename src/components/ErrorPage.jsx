@@ -39,7 +39,7 @@ const ErrorPage = () => {
             {error.status}
           </p>
           <span className="text-4xl text-red-500 font-semibold">
-              Page {error.statusText}
+              {error.statusText}
             </span>
 
           <Link

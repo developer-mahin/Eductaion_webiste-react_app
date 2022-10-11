@@ -47,7 +47,6 @@ const Blog = () => {
             <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
-              title="Nori grape silver beet broccoli kombu beet"
             >
               What is the purpose of react-router?
             </h2>
@@ -65,7 +64,6 @@ const Blog = () => {
             <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
-              title="Well, the way they make shows is, they make one"
             >
               How does context API work?
             </h2>
@@ -86,7 +84,6 @@ const Blog = () => {
             <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
-              title="Pommy ipsum smeg head whizz morris himer due"
             >
               How does work useRef Hook?
             </h2>
