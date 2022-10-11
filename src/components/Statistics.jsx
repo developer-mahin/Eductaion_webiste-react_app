@@ -1,44 +1,37 @@
 import React from "react";
 import { useContext } from "react";
 import {
-  LineChart,
-  Line,
   CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
   Legend,
+  BarChart,
+  Bar,
 } from "recharts";
 import { TopicsContext } from "./Root";
 
 const Statistics = () => {
   const topicsItems = useContext(TopicsContext).data;
-  console.log(topicsItems);
 
-  let newData = [{}];
+  let newData = [];
   for (const total of topicsItems) {
-    const totalData = total.total;
-    newData.push(totalData)
+    newData.push(total);
   }
 
-console.log(newData);
+  console.log(newData);
 
   return (
-    <div>
-      <LineChart
-        width={730}
-        height={250}
-        data={topicsItems.data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      >
+    <div className="flex items-center justify-center px-4 ">
+      <BarChart width={400} height={400} data={newData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
+        <Bar dataKey='name' fill="#8884d8" />
+        <Bar dataKey='total' fill="#8884d8" />
+      </BarChart>
     </div>
   );
 };
