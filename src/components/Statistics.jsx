@@ -12,19 +12,23 @@ import {
 import { TopicsContext } from "./Root";
 
 const Statistics = () => {
-  const topicsItems = useContext(TopicsContext).data[1].total;
-//   console.log(topicsItems.data[1].total);
+  const topicsItems = useContext(TopicsContext).data;
+  console.log(topicsItems);
 
-//   for (const total of topicsItems) {
-//     const totalData = total.total;
-//     return totalData;
-//   }
+  let newData = [{}];
+  for (const total of topicsItems) {
+    const totalData = total.total;
+    newData.push(totalData)
+  }
+
+console.log(newData);
+
   return (
     <div>
       <LineChart
         width={730}
         height={250}
-        data={topicsItems}
+        data={topicsItems.data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
         <CartesianGrid strokeDasharray="3 3" />

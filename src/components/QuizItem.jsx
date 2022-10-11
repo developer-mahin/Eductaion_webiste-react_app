@@ -10,16 +10,15 @@ const QuizItem = ({ quizItem }) => {
     toast.success(`Correct and is: ${correctAnswer}`, { autoClose: 4000 });
   };
 
-  const handleRadioCorrectAns = (ans) => {
-    // ans
-    //   ? toast.success("your ans is true", { autoClose: 4000 })
-    //   : toast.warn("your ans is wrong", { autoClose: 4000 });
 
-    if (ans !== correctAnswer) {
-      toast.warn("your ans is wrong", { autoClose: 4000 });
+  const handleRadioCorrectAns = (ans) => {
+
+    if (correctAnswer === ans) {
+      toast.success("Correct Answer", { autoClose: 4000 });
     } else {
-      toast.success("your ans is true", { autoClose: 4000 });
+      toast.error("Wrong Answer", { autoClose: 4000 });
     }
+    
   };
 
   return (
@@ -39,7 +38,7 @@ const QuizItem = ({ quizItem }) => {
       <div className="grid md:grid-cols-2 gap-5">
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
           <input
-            onClick={(correctAnswer) => handleRadioCorrectAns(correctAnswer)}
+            onClick={() => handleRadioCorrectAns(options[0])}
             type="radio"
             id="html"
             name="fav_language"
@@ -47,9 +46,10 @@ const QuizItem = ({ quizItem }) => {
           />
           <label htmlFor="html">{options[0]}</label>
         </p>
+
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
           <input
-            onClick={() => handleRadioCorrectAns(correctAnswer)}
+            onClick={() => handleRadioCorrectAns(options[1])}
             type="radio"
             id="html"
             name="fav_language"
@@ -60,7 +60,7 @@ const QuizItem = ({ quizItem }) => {
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
           {" "}
           <input
-            onClick={() => handleRadioCorrectAns(correctAnswer)}
+            onClick={() => handleRadioCorrectAns(options[2])}
             type="radio"
             id="html"
             name="fav_language"
@@ -70,7 +70,7 @@ const QuizItem = ({ quizItem }) => {
         </p>
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
           <input
-            onClick={() => handleRadioCorrectAns(correctAnswer)}
+            onClick={() => handleRadioCorrectAns(options[3])}
             type="radio"
             id="html"
             name="fav_language"
