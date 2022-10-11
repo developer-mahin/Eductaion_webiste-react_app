@@ -5,19 +5,6 @@ import { Link } from "react-router-dom";
 
 const TopicItem = ({ item }) => {
   const { id, logo, name, total } = item;
-  // const [quiz, setQuiz] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(`https://openapi.programming-hero.com/api/quiz/${id}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setQuiz(data));
-  // }, [id]);
-
-  // const handleQuiz = () => {
-  //   setQuiz()
-  // };
-
-  // console.log(quiz);
 
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4 lg:py-20">

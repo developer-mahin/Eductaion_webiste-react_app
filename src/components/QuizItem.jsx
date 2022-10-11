@@ -10,15 +10,12 @@ const QuizItem = ({ quizItem }) => {
     toast.success(`Correct and is: ${correctAnswer}`, { autoClose: 4000 });
   };
 
-
   const handleRadioCorrectAns = (ans) => {
-
     if (correctAnswer === ans) {
       toast.success("Correct Answer", { autoClose: 4000 });
     } else {
       toast.error("Wrong Answer", { autoClose: 4000 });
     }
-    
   };
 
   return (
@@ -37,46 +34,58 @@ const QuizItem = ({ quizItem }) => {
       </div>
       <div className="grid md:grid-cols-2 gap-5">
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
-          <input
+          <button onClick={() => handleRadioCorrectAns(options[0])}>
+            {options[0]}
+          </button>
+          {/* <input
             onClick={() => handleRadioCorrectAns(options[0])}
             type="radio"
             id="html"
             name="fav_language"
             value={options[0]}
           />
-          <label htmlFor="html">{options[0]}</label>
+          <label htmlFor="html">{options[0]}</label> */}
         </p>
 
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
-          <input
+        <button onClick={() => handleRadioCorrectAns(options[1])}>
+            {options[1]}
+          </button>
+          {/* <input
             onClick={() => handleRadioCorrectAns(options[1])}
             type="radio"
             id="html"
             name="fav_language"
             value={options[1]}
           />
-          <label htmlFor="html">{options[1]}</label>
+          <label htmlFor="html">{options[1]}</label> */}
         </p>
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
           {" "}
-          <input
+          <button onClick={() => handleRadioCorrectAns(options[2])}>
+            {options[2]}
+          </button>
+          {/* <input
             onClick={() => handleRadioCorrectAns(options[2])}
             type="radio"
             id="html"
             name="fav_language"
             value={options[2]}
           />
-          <label htmlFor="html">{options[2]}</label>
+          <label htmlFor="html">{options[2]}</label> */}
         </p>
         <p className="border border-blue-600 text-blue-700 font-medium p-4 rounded-xl flex items-center gap-2">
-          <input
+        <button onClick={() => handleRadioCorrectAns(options[3])}>
+            {options[3]}
+          </button>
+          {/* <input
             onClick={() => handleRadioCorrectAns(options[3])}
             type="radio"
             id="html"
             name="fav_language"
             value={options[3]}
           />
-          <label htmlFor="html">{options[3]}</label>
+          <label htmlFor="html">{options[3]}</label> */}
         </p>
       </div>
     </div>

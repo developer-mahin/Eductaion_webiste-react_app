@@ -8,8 +8,6 @@ const Home = () => {
   const topicsItems = useContext(TopicsContext);
   const topics = topicsItems.data;
 
-
-
   return (
     <div>
       <section>
