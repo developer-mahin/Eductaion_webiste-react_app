@@ -10,7 +10,7 @@ const Blog = () => {
               Brand new
             </p>
           </div>
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto capitalize">
             <span className="relative inline-block">
               <svg
                 viewBox="0 0 52 24"
@@ -34,87 +34,69 @@ const Blog = () => {
                   height="24"
                 />
               </svg>
-              <span className="relative">The</span>
+              <span className="relative">We</span>
             </span>{" "}
-            quick, brown fox jumps over a lazy dog
+            are discussing three different topics of React.js
           </h2>
-          <p className="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
-          </p>
         </div>
         <div className="grid max-w-sm gap-5 mb-8 lg:grid-cols-3 sm:mx-auto lg:max-w-full">
           <div className="px-10 py-20 text-center border rounded lg:px-5 lg:py-10 xl:py-20">
             <p className="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
-              20 Nov 2020
+              11 October 2020
             </p>
-            <a
-              href="/"
+            <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
               title="Nori grape silver beet broccoli kombu beet"
             >
-              Nori grape silver beet broccoli kombu beet
-            </a>
+              What is the purpose of react-router?
+            </h2>
             <p className="max-w-xs mx-auto mb-2 text-gray-700">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque.
+              <b>React Router</b> is a standard library for routing in React. It
+              enables the navigation among views of various components in a
+              React Application, allows changing the browser URL, and keeps the
+              UI in sync with the URL.
             </p>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-            >
-              Read more
-            </a>
           </div>
           <div className="px-10 py-20 text-center border rounded lg:px-5 lg:py-10 xl:py-20">
             <p className="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
-              20 Nov 2020
+              11 October 2020
             </p>
-            <a
-              href="/"
+            <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
               title="Well, the way they make shows is, they make one"
             >
-              Well, the way they make shows is, they make one
-            </a>
+              How does context API work?
+            </h2>
             <p className="max-w-xs mx-auto mb-2 text-gray-700">
-              Some pilots get picked and become television programs. Some don't,
-              become nothing.
+              <b>Context </b> provides a way to pass data through the component
+              tree without having to pass props down manually at every level.
+              <br />
+              In a typical React application, data is passed top-down via props,
+              but such usage can be cumbersome for certain types of props that
+              are required by many components within an application. Context
+              provides a way to share values
             </p>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-            >
-              Read more
-            </a>
           </div>
           <div className="px-10 py-20 text-center border rounded lg:px-5 lg:py-10 xl:py-20">
             <p className="mb-2 text-xs font-semibold tracking-wide text-gray-600 uppercase">
-              20 Nov 2020
+              11 October 2020
             </p>
-            <a
-              href="/"
+            <h2
               className="inline-block max-w-xs mx-auto mb-3 text-2xl font-extrabold leading-7 transition-colors duration-200 hover:text-deep-purple-accent-400"
               aria-label="Read article"
               title="Pommy ipsum smeg head whizz morris himer due"
             >
-              Pommy ipsum smeg head whizz morris himer due
-            </a>
+              How does work useRef Hook?
+            </h2>
             <p className="max-w-xs mx-auto mb-2 text-gray-700">
-              Taking the mick middle className bog roll bow ties are cool posh
-              nosh off t'shop, stew and dumps.
+              <b>useRef</b> returns a mutable ref object whose .current property is
+              initialized to the passed argument ( initialValue ). The returned
+              object will persist for the full lifetime of the component.
+              Essentially, useRef is like a “box” that can hold a mutable value
+              in its .current property
             </p>
-            <a
-              href="/"
-              aria-label=""
-              className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-            >
-              Read more
-            </a>
           </div>
         </div>
       </div>
