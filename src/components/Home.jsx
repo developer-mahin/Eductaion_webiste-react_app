@@ -1,11 +1,13 @@
-import React from "react";
-import { useContext } from "react";
-import QuizItem from "./QuizItem";
-import { QuizContext } from "./Root";
+import React, { useContext } from "react";
+import { TopicsContext } from "./Root";
+import TopicItem from '../components/TopicItem'
+
 
 const Home = () => {
-  const quizItems = useContext(QuizContext);
-  const items = quizItems.data;
+  const topicsItems = useContext(TopicsContext);
+  const topics = topicsItems.data;
+
+
 
   return (
     <div>
@@ -61,8 +63,8 @@ const Home = () => {
         </div>
       </section>
       <section className="grid lg:grid-cols-4">
-        {items.map((item) => (
-          <QuizItem key={item.id} item={item}></QuizItem>
+        {topics.map((item) => (
+          <TopicItem key={item.id} item={item}></TopicItem>
         ))}
       </section>
     </div>

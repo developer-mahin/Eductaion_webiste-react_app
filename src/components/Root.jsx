@@ -1,20 +1,19 @@
-import React from "react";
-import { createContext } from "react";
+import React, { createContext } from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export const QuizContext = createContext([]);
+export const TopicsContext = createContext([]);
 
 const Root = () => {
-    const quizItems = useLoaderData();
+    const topicsItems = useLoaderData();
 
   return (
-    <QuizContext.Provider value={quizItems}>
+    <TopicsContext.Provider value={topicsItems}>
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
-    </QuizContext.Provider>
+    </TopicsContext.Provider>
   );
 };
 
