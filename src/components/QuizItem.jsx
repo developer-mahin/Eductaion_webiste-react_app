@@ -1,17 +1,14 @@
 import React from "react";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
+import {toast} from 'react-toastify'
 
 const QuizItem = ({ quizItem }) => {
   const { question, correctAnswer, options } = quizItem;
 
-  //   const handleShowCorrect = () => {
-  //     if ("click") {
-  //       correctAnswer = correctAnswer;
-  //       return correctAnswer
-  //     }
-  //   };
+  const handleShowCorrect = () => {
+    toast.success(`Correct and is: ${correctAnswer}`, {autoClose: 4000})
+  };
 
   return (
     <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 p-4 lg:p-8 shadow-md border rounded-xl mb-8">
@@ -20,7 +17,7 @@ const QuizItem = ({ quizItem }) => {
           className="text-xl text-center font-semibold mb-3 text-blue-700"
           dangerouslySetInnerHTML={{ __html: question }}
         ></h2>{" "}
-        <button>
+        <button onClick={handleShowCorrect}>
           <FontAwesomeIcon
             className="text-blue-700"
             icon={faEye}
