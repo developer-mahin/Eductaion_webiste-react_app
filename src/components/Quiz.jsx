@@ -12,8 +12,12 @@ const Quiz = () => {
         Quiz of {quizTopicName.name}
       </h2>
       <div className="p-4 md:p-8 w-full md:w-8/12 m-auto">
-        {quiz.map((quizItem) => (
-          <QuizItem key={quizItem.id} quizItem={quizItem}></QuizItem>
+        {quiz.map((quizItem, index) => (
+          <QuizItem
+            key={quizItem.id}
+            quizItem={quizItem}
+            index={index}
+          ></QuizItem>
         ))}
       </div>
     </div>

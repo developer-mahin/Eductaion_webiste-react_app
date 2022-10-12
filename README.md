@@ -1,5 +1,16 @@
-# Getting Started with Create React App
+# My Project Details
+## Educational website
+## Website title : EDUMA A Web Programming  Quiz Site
+## Website name (EDUMA)
+## Website link (https://dapper-cajeta-4a86ac.netlify.app/)
+# What is the functionality of this site
+* ## You can see some topics on home route.
+* ## When you click on a specific start practice button, you will get many quizzes on that topic.
+* ## If you answer the questions correctly/wrongly, you can see on a toast whether your answer is correct or not.
 
+* ## If you want to see the answer to any of our questions from us, then you can click on the eye button next to the question.
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

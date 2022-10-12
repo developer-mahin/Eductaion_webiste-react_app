@@ -3,11 +3,12 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
 
-const QuizItem = ({ quizItem }) => {
+const QuizItem = ({ quizItem, index }) => {
+  console.log(index);
   const { question, correctAnswer, options } = quizItem;
 
   const handleCorrectEyeButton = () => {
-    toast.success(`Correct and is: ${correctAnswer}`, { autoClose: 4000 });
+    toast.success(`Correct ans is: ${correctAnswer}`, { autoClose: 4000 });
   };
 
   const handleRadioCorrectAns = (ans) => {
@@ -20,9 +21,12 @@ const QuizItem = ({ quizItem }) => {
 
   return (
     <div className="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 p-4 lg:p-8 shadow-md border rounded-xl mb-8">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-evenly gap-8">
+        <p className="text-xl flex gap-2 font-semibold mb-3 text-blue-700 w-28">
+          <span>Quiz:</span> <span>{index === 0 ? (index = 1) : index + 1}</span>
+        </p>
         <h2
-          className="text-xl text-center font-semibold mb-3 text-blue-700"
+          className="text-xl font-semibold mb-3 text-blue-700"
           dangerouslySetInnerHTML={{ __html: question }}
         ></h2>{" "}
         <button onClick={handleCorrectEyeButton}>
